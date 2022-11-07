@@ -1,0 +1,208 @@
+.scrollable-table {
+  @extend .scrollable;
+  td {
+    position: relative;
+  }
+
+  table {
+    width: 100%;
+    margin: auto;
+    margin-top: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  thead th {
+    background: $color-background-primary;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+
+  tfoot,
+  tfoot th,
+  tfoot td {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    z-index: 5;
+  }
+
+  tbody th:first-child {
+    position: relative;
+  }
+
+  th:first-child {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+  }
+
+  thead th:first-child,
+  tfoot th:first-child {
+    z-index: 5;
+  }
+}
+
+.work-table {
+  thead th {
+    background: $color-background-primary;
+    color: $color-text-primary;
+  }
+
+  /* safari and ios need the tfoot itself to be position:sticky also */
+  tfoot,
+  tfoot th,
+  tfoot td {
+    background: $color-background-primary;
+    color: $color-text-primary;
+  }
+
+  .table-wrap {
+    position: relative;
+  }
+
+  thead {
+    th {
+      height: auto;
+    }
+
+    th,
+    td {
+      vertical-align: top;
+    }
+  }
+
+  th,
+  td {
+    position: initial;
+    height: 100%;
+    max-height: 5rem;
+    padding: 0;
+    background: $color-background-primary;
+    font-weight: normal;
+    border: 1px solid $color-stroke-tertiary;
+  }
+
+  td.week-half,
+  th.week-half {
+    border-left: 2px solid $color-stroke-tertiary;
+  }
+
+  thead {
+    th {
+      border-right: none;
+    }
+    th:last-child {
+      border-right: 1px solid $color-stroke-tertiary;
+    }
+  }
+
+  tbody {
+    th,
+    td {
+      border-bottom: none;
+      border-right: none;
+    }
+
+    tr:first-child td,
+    tr:first-child th {
+      border-top: none;
+    }
+
+    tr td:last-child {
+      border-right: 1px solid $color-stroke-tertiary;
+    }
+  }
+
+  tfoot {
+    td {
+      border-right: none;
+    }
+
+    td:last-child {
+      border-right: 1px solid $color-stroke-tertiary;
+    }
+  }
+
+  td {
+    padding: 0.5rem 1rem;
+  }
+
+  td.thin {
+    padding: 0.5rem 0.5rem;
+  }
+
+  th:first-child {
+    background: $color-background-primary;
+  }
+  thead th:first-child,
+  tfoot th:first-child {
+    padding: 0.5rem 1rem;
+    z-index: 5;
+  }
+
+  thead th:first-child {
+    border-radius: 4px 0 0 0;
+  }
+
+  thead th:last-child {
+    border-radius: 0 4px 0 0;
+  }
+  tfoot td:first-child {
+    border-radius: 0 0 0 4px;
+  }
+
+  tfoot td:last-child {
+    border-radius: 0 0 4px 0;
+  }
+
+  // from fix table artefact
+  table tfoot td:first-child::before,
+  table tfoot td:last-child::after,
+  table thead th:first-child::before,
+  table thead th:last-child::after {
+    width: .0625rem;
+    height: .125rem;
+    background: $color-background-primary;
+    content: '';
+    display: block;
+    position: absolute;
+  }
+  table thead th:first-child::before {
+    top: -0.0625rem;
+    left: -0.0625rem;
+  }
+  table thead th:last-child::after {
+    top: -0.0625rem;
+    right: -0.0625rem;
+  }
+
+  table tfoot td:first-child::before {
+    left: -0.0625rem;
+    bottom: -0.0625rem;
+  }
+  table tfoot td:last-child::after {
+    right: -0.0625rem;
+    bottom: -0.0625rem;
+  }
+
+  // end fix artefact
+}
+
+@include mobile {
+  .work-table {
+    th,
+    td {
+      position: initial;
+      height: 2.5rem;
+      width: 2.5rem;
+      padding: 0;
+      background: $color-background-primary;
+      vertical-align: middle;
+      font-weight: normal;
+      text-align: center;
+      border-radius: 4px;
+    }
+  }
+}

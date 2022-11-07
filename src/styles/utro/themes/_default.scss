@@ -1,0 +1,59 @@
+:root {
+  --color-basic-primary: #00c3ff;
+  --color-basic-secondary: #2b313b;
+  --color-basic-tertiary: #8a96a8;
+  --color-basic-hover: #40d1ff;
+  --color-basic-press: #40d1ff;
+  --color-basic-disabled: #c4cad4;
+  --color-basic-primary-light: #86e2ff;
+
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f1f2f4;
+  --color-background-tertiary: #e2e5e9;
+  --color-background-initial: #f8f9fa;
+  --color-background-tertiaryHover: #d3d8de;
+  --color-background-card: #ffffff;
+  --color-background-cardHover: #ffffff;
+  --color-background-surfaceDanger: #fef0f1;
+  --color-background-surfaceWarn: #fff7f0;
+  --color-background-surfaceSuccess: #f2fcf5;
+  --color-background-inversion: #2b313b;
+  --color-background-shadow: #8a96a8;
+
+  --color-text-primary: #2b313b;
+  --color-text-secondary: #626f84;
+  --color-text-tertiary: #a7b0be;
+  --color-text-inversion: #ffffff;
+  --color-text-staticWhite: #ffffff;
+  --color-text-staticBlack: #2b313b;
+
+  // Text Colors
+  --color-text-primary: #2b313b;
+
+  --color-stroke-tertiary: #d3d8de;
+
+  // Special Colors
+  --color-special-soft-gray: #edf1f8;
+  --color-special-green: #5ecf70;
+  --color-special-soft-green: #ebf9ee;
+  --color-special-yellow: #ffaf37;
+  --color-special-soft-yellow: #fff5e6;
+  --color-special-blue: #0abbfb;
+  --color-special-soft-blue: #e6f8ff;
+  --color-special-soft-light-blue: #e6f8ff;
+  --color-special-red: #ff525c;
+  --color-special-soft-red: #ffe6e7;
+  --color-special-soft-turquoise: #2b313b;
+
+  --non-clickable-box-shadow: 0px 4px 16px rgba(138, 150, 168, 0.4),
+    0px 0px 6px rgba(138, 150, 168, 0.08);
+  --clickable-active-box-shadow: 0px 2px 4px rgba(138, 150, 168, 0.4),
+    0px -2px 2px rgba(138, 150, 168, 0.08);
+  --clickable-default-box-shadow: 0px 4px 8px rgba(138, 150, 168, 0.4),
+    0px -2px 4px rgba(138, 150, 168, 0.08);
+  --clickable-hover-box-shadow: 0px 8px 16px rgba(138, 150, 168, 0.4),
+    0px -2px 8px rgba(138, 150, 168, 0.08);
+
+    --color-fullscreen-modal-backdrop: #afb1b6;
+    --color-modal-backdrop: #2b313b60;
+}

@@ -1,0 +1,10 @@
+.checkbox-wrapper {
+  display: inline-flex;
+  box-sizing: border-box;
+
+  & > span,
+  .checkbox-label {
+    margin-left: 0.5rem;
+  }
+}
+

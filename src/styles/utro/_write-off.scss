@@ -1,0 +1,322 @@
+@import 'src/styles/utro/mixins';
+
+.write-off {
+  .heading {
+    &-week-day {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: stretch;
+      align-items: center;
+      @extend .l-16pt-bold;
+
+      .weekday {
+        margin-top: 0.5rem;
+        color: $color-text-secondary;
+        text-transform: uppercase;
+        @extend .s-14pt-bold;
+
+        @include mobile {
+          span {
+            color: $color-text-primary;
+          }
+        }
+      }
+    }
+
+    &-today {
+      @include mobile {
+        .weekday span {
+          color: $color-special-blue;
+        }
+      }
+      .weekday,
+      .write-off-heading-date {
+        // TODO Савчиц fix  selector (дублируется - вынести в отдельный селектор)
+        color: $color-special-blue;
+      }
+    }
+    .write-off-heading-date {
+      @extend .xs-h6-18pt-bold;
+    }
+  }
+
+  thead {
+    .day {
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-background-tertiaryHover;
+        // border: 1px solid $color-basic-primary;
+      }
+    }
+  }
+  &-weekend:not(.disabled):not(.write-off-disabled) {
+    background-color: $color-special-soft-light-blue !important; // TODO Савчиц чтобы работало без important
+  }
+
+  &-weekend:not(.edited):not(.sent):not(.disabled):not(.write-off-disabled) {
+    .button-cell {
+      background-color: $color-background-primary;
+    }
+  }
+
+  &-disabled {
+    background-color: $color-background-secondary !important; // TODO Савчиц чтобы работало без important
+  }
+
+  &-cell {
+    height: 100%;
+    max-height: 4rem;
+    max-width: 4rem;
+    text-align: center;
+
+    .tooltip {
+      display: block;
+      width: 100%;
+      position: initial;
+    }
+
+    .button-cell {
+      max-width: 4rem;
+      height: 4rem;
+      margin: 0 auto;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      display: flex;
+      box-sizing: border-box;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      @extend .l-16pt-normal;
+
+      &:hover {
+        background-color: $color-hover;
+      }
+
+      .plus {
+        font-weight: 700;
+        line-height: normal;
+        color: $color-basic-tertiary;
+      }
+    }
+
+    &.sent {
+      &:hover {
+        background-color: $color-special-soft-green;
+      }
+
+      .button-cell {
+        border-color: $color-special-green;
+        background-color: $color-special-soft-green;
+
+        @include mobile {
+          color: $color-special-green;
+        }
+      }
+    }
+
+    &.edited {
+      &:hover {
+        background-color: $color-special-soft-yellow;
+      }
+
+      .button-cell {
+        border-color: $color-special-yellow;
+        background-color: $color-special-soft-yellow;
+
+        @include mobile {
+          color: $color-special-yellow;
+        }
+      }
+    }
+
+    &.disabled {
+      color: $color-text-primary;
+      background-color: $color-background-secondary;
+
+      &:hover {
+        background-color: $color-background-secondary;
+        cursor: default;
+      }
+    }
+
+    &.disabled:not(.sent) {
+      .button-cell {
+        border-color: $color-background-tertiaryHover;
+        &:hover {
+          background-color: $color-background-secondary;
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  &-footer {
+    .summary-text {
+      color: $color-text-secondary;
+    }
+    td {
+      height: 2.75rem;
+    }
+    .workingTotalHours,
+    td {
+      font-weight: 500;
+
+      .cell {
+        height: 100%;
+        border-radius: 4px;
+
+        &.debt {
+          background-color: $color-special-soft-red;
+        }
+
+        &.edited {
+          background-color: $color-special-soft-yellow;
+        }
+        &.sent {
+          background-color: $color-special-soft-green;
+        }
+
+        &.weekend {
+          background-color: $color-special-soft-blue;
+        }
+
+        &.disabled {
+          background-color: $color-background-secondary;
+        }
+      }
+    }
+
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &-heading-date {
+    font-weight: 500;
+  }
+}
+
+@include mobile {
+  .write-off {
+    .heading {
+      &-week-day {
+        height: unset;
+        width: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: center;
+
+        .weekday {
+          margin-top: 0rem;
+          color: $color-text-secondary;
+          text-transform: uppercase;
+        }
+      }
+
+      &-today {
+        .weekday,
+        .write-off-heading-date {
+          // TODO Савчиц fix  selector (дублируется - вынести в отдельный селектор)
+          color: $color-special-blue;
+        }
+      }
+    }
+    &-cell {
+      text-align: center;
+
+      .button-cell {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 0 auto;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &:hover {
+          background-color: $color-hover;
+        }
+
+        .plus {
+          font-weight: 700;
+          color: $color-basic-tertiary;
+          line-height: 15px;
+        }
+      }
+    }
+    &-disabled {
+      background-color: unset !important;
+    }
+  }
+}
+
+.day {
+  .write-off {
+    &-weekend:not(.disabled):not(.write-off-disabled):not(.sent):not(.edited) {
+      .button-cell {
+        background-color: $color-special-soft-light-blue;
+      }
+    }
+  }
+}
+
+.dark {
+  .write-off-weekend:not(.disabled):not(.write-off-disabled) {
+    .button-cell {
+      border: $color-special-blue 1px solid;
+    }
+  }
+
+  .write-off-footer {
+    td {
+      .cell {
+        &.debt {
+          border: $color-special-red 1px solid;
+        }
+
+        &.edited {
+          border: $color-special-yellow 1px solid;
+        }
+        &.sent {
+          border: $color-special-green 1px solid;
+        }
+
+        &.weekend {
+          border: $color-special-blue 1px solid;
+        }
+
+        &.disabled {
+          border: $color-background-secondary 1px solid;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .write-off {
+    .button-cell,
+    .day {
+      max-height: 2rem !important;
+      max-width: 2rem !important;
+
+      .heading-week-day {
+        width: 100%;
+        height: 100%;
+        & span {
+          font-size: 0.75rem !important;
+          line-height: 1rem;
+        }
+      }
+    }
+  }
+}

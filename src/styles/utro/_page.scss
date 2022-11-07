@@ -1,0 +1,182 @@
+@import 'src/styles/utro/variables';
+
+$footer-size: 3.875rem;
+$heading-size: 2.25rem;
+$page-container-padding-top: 2rem;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+
+  @include desktop {
+    padding-right: 0;
+  }
+
+  &-container {
+    padding: $page-container-padding-top 3.5rem 0 3.5rem;
+
+    @include tablet {
+      padding: $page-container-padding-top 0 0 1rem;
+    }
+
+    &.week {
+      .work-table {
+        display: flex;
+        height: calc(
+          100vh - $footer-size - $heading-size - $page-container-padding-top -
+            7rem
+        ); // TODO fix height
+
+        table {
+          max-height: calc(
+            100vh - $footer-size - $heading-size - $page-container-padding-top -
+              7rem
+          ); // TODO fix height
+        }
+      }
+    }
+
+    &.day {
+      height: calc(100vh - 6rem); // TODO fix height
+
+      .scrollable {
+        max-height: calc(
+          100vh - $footer-size - $heading-size - $page-container-padding-top -
+            2.5rem - 3.25rem
+        ); // TODO fix height
+        @include mobile {
+          padding-bottom: 9.375rem;
+        }
+      }
+    }
+
+    &.approval {
+      $container-heights: $footer-size - $page-container-padding-top;
+      $nav-tabs: 2.8125rem + 0.125rem + 1rem;
+
+      $table-selectors: 2.375rem + 1rem;
+      $section-padding: 1.5rem;
+
+      $table-height: calc(
+        55vh - $table-selectors - $nav-tabs - $section-padding
+      );
+
+      height: calc(100vh - $footer-size);
+
+      .approval-sections {
+        max-height: calc(100vh - $heading-size - 1.5rem);
+
+        .table-section .table-container {
+          height: $table-height;
+        }
+
+        .details-section {
+          max-height: calc(
+            100vh - $container-heights - $heading-size - $table-height
+          );
+
+          .scrollable-table,
+          .scrollable {
+            max-height: calc(
+              100vh - $container-heights - $heading-size - $table-height -
+                15.75rem
+            );
+          }
+        }
+      }
+    }
+
+    &.week.correction {
+      .work-table {
+        display: flex;
+        height: calc(100vh - 18.6rem); // TODO fix height
+
+        table {
+          max-height: calc(100vh - 18.6rem); // TODO fix height
+        }
+      }
+    }
+
+    &.day.correction {
+      height: calc(100vh - 6rem); // TODO fix height
+
+      .scrollable {
+        max-height: calc(100vh - 14.0625rem - 3.25rem); // TODO fix height
+      }
+    }
+  }
+
+  .list-actions-active {
+    &.day {
+      height: calc(100vh - 5.9375rem - $list-acitons-height); // TODO fix height
+
+      .scrollable {
+        max-height: calc(
+          100vh - 10rem - 3.25rem - $list-acitons-height
+        ); // todo fix height
+      }
+    }
+  }
+
+  &-footer {
+    height: 4rem;
+    padding: 0.75rem 3.5rem;
+    box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
+    @include mobile {
+      height: auto;
+    }
+  }
+}
+
+@include mobile {
+  h4.mobile-heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $color-background-secondary;
+    color: $color-text-secondary;
+    font-size: 16px;
+    line-height: 24px;
+    position: absolute;
+    top: 3rem;
+    margin-left: -1rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+@include zoomed-screen {
+  html {
+    font-size: 80%;
+
+    .writeoff {
+      &.week {
+        #work-minicards-container {
+          max-height: calc(100vh - 12.5rem);
+        }
+      }
+    }
+
+    .list-actions-active {
+      &.day.correction {
+        #work-minicards-container {
+          max-height: calc(100vh - 18rem - 4rem);
+        }
+      }
+    }
+
+    .correction {
+      &.day {
+        #work-minicards-container {
+          max-height: calc(100vh - 18rem);
+        }
+      }
+
+      &.week {
+        #work-minicards-container {
+          max-height: calc(100vh - 14.5rem);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+@import 'themes';
+@import 'variables';
+@import 'mixins';
+
+@import '../../../node_modules/bootstrap/scss/functions';
+@import '../../../node_modules/bootstrap/scss/variables';
+
+@import 'vendor';
+@import 'fonts';
+@import 'typography';
+@import 'scrollable';
+@import 'table';
+@import 'toast';
+@import 'modal';
+@import 'write-off';
+@import 'text';
+@import 'override';
+@import 'form';
+@import 'filter';
+@import 'table-filter';
+@import 'utils';
+@import 'page';
+
+body {
+  font-family: 'Roboto' !important;
+  line-height: 1.25rem;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  background-color: $color-background-primary;
+  color: $color-text-primary;
+  -webkit-overflow-scrolling: touch !important;
+  overflow: hidden !important;
+
+  @include mobile {
+    overflow: auto !important;
+  }
+}
+
+div#root {
+  height: 100vh;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.max-vh-100 {
+  max-height: 100vh;
+}
+
+@include mobile {
+  * {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .page-container {
+    padding: 1rem 0 1rem 1rem !important;
+
+    h3 {
+      display: none;
+    }
+  }
+  .page {
+    &-container {
+      &.week {
+        .work-table {
+          display: flex;
+          padding-bottom: 150px;
+        }
+      }
+    }
+
+    &-footer {
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: #{$breakpoint-tablet-max + 2px}) and (max-width: 1230px) {
+  .sidebar-wrapper {
+    width: 20%;
+    > aside {
+      > div {
+        padding: 1rem 0.5rem !important;
+      }
+    }
+  }
+
+  .page {
+    width: 80%;
+
+    &-container {
+      padding-left: 1rem;
+
+      &.approval {
+        padding-right: 1rem;
+      }
+
+      &.week,
+      &.day {
+        padding-right: 0;
+
+        .activities {
+          > div {
+            height: auto;
+          }
+        }
+
+        .minicard-tag {
+          max-width: 8.75rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap !important;
+          font-size: 0.75rem !important;
+        }
+
+        .dropdown {
+          i:before {
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+  }
+}

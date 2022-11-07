@@ -1,0 +1,105 @@
+// Colors Dark
+// $color-basic-primary: #00c3ff;
+// $color-basic-secondary: #E2E5E9;
+// $color-basic-tertiary: #E2E5E9;
+// $color-basic-hover: #40d1ff;
+// $color-basic-press: #40d1ff;
+// $color-basic-disabled: #414A58;
+// $color-basic-primary-light: #86e2ff;
+
+// $color-background-primary: #1A1E23;
+// $color-background-secondary: #252A32;
+// $color-background-tertiary: #2B313B;
+// $color-background-initial: #323943;
+// $color-background-tertiaryHover: #323943;
+// $color-background-card: #21252C;
+// $color-background-cardHover: #2B313B;
+// $color-background-inversion: #E2E5E9;
+// $color-background-shadow: #000000;
+// $color-background-surfaceDanger: #252A32;
+// $color-background-surfaceWarn: #252A32;
+// $color-background-surfaceSuccess: #252A32;
+
+// $color-text-primary: #E2E5E9;
+// $color-text-secondary: #8A96A8;
+// $color-text-tertiary: #4C5767;
+// $color-text-inversion: #1A1E23;
+// $color-text-staticWhite: #ffffff;
+// $color-text-staticBlack: #2b313b;
+
+// // Text Colors
+
+// $color-stroke-tertiary: #d3d8de;
+
+// // Special Colors
+// $color-special-soft-blue: #2B313B;
+// $color-special-blue: #0abbfb;
+// $color-special-soft-gray: #2B313B;
+// $color-special-green: #5ecf70;
+// $color-special-soft-green: #2B313B;
+// $color-special-yellow: #ffaf37;
+// $color-special-soft-yellow: #2B313B;
+// $color-special-soft-light-blue: #2B313B;
+// $color-special-red: #ff525c;
+// $color-special-soft-red: #2B313B;
+// $color-special-soft-turquoise: #2B313B;
+
+body.dark {
+  --color-basic-primary: #00c3ff;
+  --color-basic-secondary: #e2e5e9;
+  --color-basic-tertiary: #e2e5e9;
+  --color-basic-hover: #40d1ff;
+  --color-basic-press: #40d1ff;
+  --color-basic-disabled: #414a58;
+  --color-basic-primary-light: #86e2ff;
+
+  --color-background-primary: #1a1e23;
+  --color-background-secondary: #252a32;
+  --color-background-tertiary: #2b313b;
+  --color-background-initial: #323943;
+  --color-background-tertiaryHover: #323943;
+  --color-background-card: #21252c;
+  --color-background-cardHover: #2b313b;
+  --color-background-inversion: #e2e5e9;
+  --color-background-shadow: #000000;
+  --color-background-surfaceDanger: #252a32;
+  --color-background-surfaceWarn: #252a32;
+  --color-background-surfaceSuccess: #252a32;
+
+  --color-text-primary: #e2e5e9;
+  --color-text-secondary: #8a96a8;
+  --color-text-tertiary: #4c5767;
+  --color-text-inversion: #1a1e23;
+  --color-text-staticWhite: #ffffff;
+  --color-text-staticBlack: #2b313b;
+
+  // Text Colors
+
+  --color-stroke-tertiary: #4c5767;
+  // --color-stroke-tertiary: #d3d8de;
+
+  // Special Colors
+  --color-special-soft-blue: #2b313b;
+  --color-special-blue: #0abbfb;
+  --color-special-soft-gray: #2b313b;
+  --color-special-green: #5ecf70;
+  --color-special-soft-green: #2b313b;
+  --color-special-yellow: #ffaf37;
+  --color-special-soft-yellow: #2b313b;
+  --color-special-soft-light-blue: #2b313b;
+  --color-special-red: #ff525c;
+  --color-special-soft-red: #2b313b;
+  --color-special-soft-turquoise: #2b313b;
+
+  --non-clickable-box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.4),
+    0px 0px 6px rgba(0, 0, 0, 0.08);
+  --clickable-active-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4),
+    0px -2px 2px rgba(0, 0, 0, 0.08);
+  --clickable-default-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4),
+    0px -2px 4px rgba(0, 0, 0, 0.08);
+  --clickable-hover-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4),
+    0px -2px 8px rgba(0, 0, 0, 0.08);
+
+  --color-fullscreen-modal-backdrop: #000;
+  --color-modal-backdrop: #000;
+}

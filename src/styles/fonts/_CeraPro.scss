@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'CeraProBold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./CeraPro/CeraProBold.eot');
+  src: local(''), url('./CeraPro/CeraProBold.woff2') format('woff2'),
+    url('./CeraPro/CeraProBold.woff') format('woff'),
+    url('./CeraPro/CeraProBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CeraProMedium';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./CeraPro/CeraProMedium.eot');
+  src: local(''), url('./CeraPro/CeraProMedium.woff2') format('woff2'),
+    url('./CeraPro/CeraProMedium.woff') format('woff'),
+    url('./CeraPro/CeraProMedium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CeraProRegular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./CeraPro/CeraProRegular.eot');
+  src: local(''), url('./CeraPro/CeraProRegular.woff2') format('woff2'),
+    url('./CeraPro/CeraProRegular.woff') format('woff'),
+    url('./CeraPro/CeraProRegular.ttf') format('truetype');
+}

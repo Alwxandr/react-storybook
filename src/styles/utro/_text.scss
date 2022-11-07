@@ -1,0 +1,10 @@
+.label {
+  @extend .text-muted;
+  @extend .s-14pt-normal;
+  margin-bottom: .5rem;
+}
+
+
+.text-secondary {
+  color: $color-text-secondary;
+}

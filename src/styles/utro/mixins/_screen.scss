@@ -1,0 +1,23 @@
+@mixin mobile {
+  @media screen and (max-width: #{$breakpoint-mobile-max}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: #{($breakpoint-mobile-max + 1px)}) and (max-width: #{$breakpoint-tablet-max + 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$breakpoint-tablet-max + 1px}) {
+    @content;
+  }
+}
+
+@mixin zoomed-screen {
+  @media screen and (min-resolution: 1.25dppx) and (max-resolution: 1.99dppx) {
+    @content;
+  }
+}

@@ -1,0 +1,143 @@
+.dropdown-menu {
+  margin-top: 0.75rem;
+  box-shadow: $dropdown-box-shadow;
+  inset: initial;
+
+  .dropdown-item.active {
+    background-color: $color-background-secondary;
+    color: $color-text-primary;
+  }
+}
+
+.btn.btn-primary:disabled {
+  background-color: $color-basic-disabled;
+  border-color: $color-basic-disabled;
+}
+
+.dropdown-toggle {
+  &:after {
+    font-family: icons !important;
+    content: '\f120';
+    border: none;
+    vertical-align: middle;
+    color: $color-basic-tertiary;
+  }
+}
+
+.nav-tabs {
+  border-bottom: 2px solid $color-background-tertiary;
+
+  .nav-item {
+    position: relative;
+    padding: 0.5rem 0 0 0;
+  }
+
+  .nav-link {
+    border: none;
+    color: $color-text-secondary;
+
+    @extend .l-16pt-bold;
+
+    &.active {
+      &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 100%;
+        left: 0;
+        bottom: -0.125rem;
+        border-bottom: 2px solid $color-basic-primary;
+      }
+    }
+  }
+}
+
+.popover {
+  border: none;
+  box-shadow: var(--non-clickable-box-shadow);
+}
+
+.opt-in-table {
+  > :not(caption) > * > * {
+    border-color: $color-background-tertiaryHover;
+  }
+
+  thead {
+    th {
+      @extend .s-14pt-bold;
+      background: $color-background-primary;
+      color: $color-text-secondary;
+      border-bottom-width: 2px;
+      z-index: 1;
+    }
+  }
+
+  tbody {
+    th,
+    td {
+      color: $color-text-primary;
+      @extend .s-14pt-normal;
+    }
+  }
+}
+i.mi-m-size {
+  &:before {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+}
+
+i.mi-xs-size {
+  &:before {
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+  }
+}
+
+i.mi-bold {
+  &:before {
+    font-weight: 900 !important;
+  }
+}
+
+// Theme fix
+.list-group-item,
+.popover,
+.page-link,
+.page-item.disabled .page-link,
+.dropdown-menu,
+.form-control,
+.form-control:focus,
+.nav-tabs .nav-link.active {
+  background-color: $color-background-primary;
+}
+
+.table,
+.list-group-item,
+.popover-body,
+.dropdown-item,
+.nav-tabs .nav-link.active {
+  color: $color-text-primary;
+}
+
+.bs-popover-bottom > .popover-arrow::after {
+  border-bottom-color: $color-background-primary;
+}
+
+.list-group-item {
+  border-color: $color-stroke-tertiary;
+}
+
+@media screen and (max-width: 425px) {
+  .btn {
+    font-size: 0.8rem;
+  }
+}
+
+.form-control {
+  &:focus {
+    outline: none!important;
+    box-shadow: none;
+    border-color: $color-basic-primary !important;
+  }
+}

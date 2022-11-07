@@ -1,0 +1,8 @@
+.filter {
+  .filter-group {
+    margin-top: 1.25rem;
+    &-heading {
+      @extend .l-16pt-bold;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import 'src/styles/utro/mixins';
+
+.s-14pt-normal {
+  @include s-14-normal;
+}
+
+.s-14pt-bold {
+  @include s-14-bold;
+}
+
+.l-16pt-normal {
+  @include l-16-normal;
+}
+
+.m-16pt-normal {
+  @include m-16-normal;
+}
+
+.l-16pt-bold {
+  @include l-16-bold;
+}
+
+.xs-h6-18pt-bold {
+  @include xs-h6-18-bold;
+}
+
+.m-h4-28pt {
+  @include m-h4-28;
+}
+
+.s-h5-22pt {
+  @include s-h5-22;
+}
