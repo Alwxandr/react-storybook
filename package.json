@@ -1,7 +1,7 @@
 {
   "name": "@alwxandr/react-storybook",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/Alwxandr/react-storybook"
+    "registry": "https://npm.pkg.github.com/Alwxandr"
   },
   "version": "0.2.88",
   "description": "A simple template for a custom React component library",
