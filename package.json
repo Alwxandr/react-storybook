@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "version": "0.2.88",
+  "version": "0.3.00",
   "description": "A simple template for a custom React component library",
   "scripts": {
     "rollup": "rollup -c",
@@ -58,6 +58,7 @@
   ],
   "types": "dist/index.d.ts",
   "dependencies": {
+    "classnames": "^2.3.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-svg": "^2.0.0"
   }
